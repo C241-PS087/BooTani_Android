@@ -1,17 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ArtikelFragment">
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Artikel"
-        android:gravity="center"
-        android:textColor="@color/midnight"
-        android:textSize="35sp"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-</FrameLayout>
+        <!-- Judul Artikel -->
+        <TextView
+            android:id="@+id/article_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Judul Artikel"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Gambar Artikel -->
+        <ImageView
+            android:id="@+id/article_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Tanggal Artikel -->
+        <TextView
+            android:id="@+id/article_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10 Juni 2024"
+            android:textSize="14sp"
+            android:textColor="#888888"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Konten Artikel -->
+        <TextView
+            android:id="@+id/article_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Isi artikel akan ditampilkan di sini. Ini adalah contoh konten artikel yang panjang sehingga membutuhkan scroll view."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"/>
+
+    </LinearLayout>
+
+</ScrollView>
