@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_home"
+        android:title="Home"
+        android:icon="@drawable/baseline_home_24"/>
+
+    <item
+        android:id="@+id/bottom_tinjau_harga"
+        android:title="Tinjau"
+        android:icon="@drawable/baseline_trending_up_24"/>
+
+    <item
+        android:id="@+id/bottom_recommend"
+        android:title="Rekomendasi"
+        android:icon="@drawable/baseline_recommend_24"/>
+
+    <item
+        android:id="@+id/bottom_artikel"
+        android:title="Artikel"
+        android:icon="@drawable/baseline_jenis_tanaman_24"/>
+
+</menu>
