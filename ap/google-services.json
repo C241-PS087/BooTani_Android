@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "322155701595",
+    "project_id": "bootani-4f1ab",
+    "storage_bucket": "bootani-4f1ab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:322155701595:android:161efdc4eb5f3d31d0e67e",
+        "android_client_info": {
+          "package_name": "com.example.bootani"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQzItvcYKJD7-4aHGTa7VqyeVEhhoVbuI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
