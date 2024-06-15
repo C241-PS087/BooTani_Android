@@ -35,8 +35,8 @@ class RegisterActivity : AppCompatActivity() {
                 val userResponse = response.body()
                 Toast.makeText(this, userResponse?.message, Toast.LENGTH_LONG).show()
 
-                // Start MainActivity
-                val intent = Intent(this, MainActivity::class.java)
+                // Start LoginActivity
+                val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
                 finish() // Optional: if you want RegisterActivity to be removed from the back stack
             } else {
