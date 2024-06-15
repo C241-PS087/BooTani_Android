@@ -68,7 +68,6 @@
             android:textColorHint="@color/white40"
             android:textSize="11sp" />
 
-
         <TextView
             android:id="@+id/email_or_phone_number"
             android:layout_width="wrap_content"
