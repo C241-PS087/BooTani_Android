@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding.bottomNavigation.setOnItemSelectedListener { item ->
             when(item.itemId){
                 R.id.bottom_home -> openFragment(HomeFragment())
-                R.id.bottom_tinjau_harga -> openFragment(TinjauFragment())
+                R.id.bottom_tinjau_harga -> openFragment(TinjauHargaFragment())
                 R.id.bottom_recommend -> openFragment(RekomendasiFragment())
                 R.id.bottom_artikel -> openFragment(ArtikelFragment())
             }
@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             R.id.nav_home -> openFragment(HomeFragment())
-            R.id.nav_tinjau_harga -> openFragment(TinjauFragment())
+            R.id.nav_tinjau_harga -> openFragment(TinjauHargaFragment())
             R.id.nav_rekomendasi_tanaman -> openFragment(RekomendasiFragment())
             R.id.nav_artikel -> openFragment(ArtikelFragment())
         }

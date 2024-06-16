@@ -15,7 +15,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:background="@color/forest_green"
+            android:background="#273526"
             android:elevation="4dp"
             android:popupTheme="@style/Theme.AppCompat.Light"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
@@ -58,8 +58,8 @@
         android:layout_height="match_parent"
         android:id="@+id/navigation_drawer"
         android:layout_gravity="start"
-        app:itemIconTint="@color/forest_green"
-        app:itemTextColor="@color/forest_green"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/nav_menu"/>
 

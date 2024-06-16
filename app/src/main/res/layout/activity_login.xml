@@ -14,7 +14,7 @@
         android:background="@drawable/circle_shape"/>
 
     <TextView
-        android:id="@+id/ed_login_email"
+        android:id="@+id/et_back_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
@@ -103,7 +103,7 @@
             android:layout_height="40dp"
             android:layout_marginTop="315dp"
             android:gravity="center"
-            android:text="log"
+            android:text="@string/log_in"
             android:fontFamily="@font/poppins_bold"
             app:backgroundTint="@color/green_light"
             android:textSize="14sp"

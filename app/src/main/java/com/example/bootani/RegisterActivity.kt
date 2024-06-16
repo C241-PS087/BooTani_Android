@@ -30,6 +30,11 @@ class RegisterActivity : AppCompatActivity() {
             registerViewModel.signUp(SignUpRequest(username, emailOrPhone, password, confirmPassword))
         }
 
+        binding.etBackButton.setOnClickListener {
+            val intent = Intent(this, WelcomeActivity::class.java)
+            startActivity(intent)
+        }
+
         registerViewModel.signUpResponse.observe(this, Observer { response ->
             if (response.isSuccessful) {
                 val userResponse = response.body()
