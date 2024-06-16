@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:background="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/welcome_bg"
+        tools:ignore="TextFields">
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="360dp"
+            android:gravity="center"
+            android:text="@string/log_in"
+            android:fontFamily="@font/poppins_bold"
+            app:backgroundTint="@color/green_light"
+            android:textSize="14sp"
+            android:background="@drawable/button_background"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/sign_up"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/sign_up"
+            android:layout_below="@+id/login_button"
+            android:fontFamily="@font/poppins_bold"
+            app:backgroundTint="@color/green_light"
+            android:textSize="14sp"
+            android:background="@drawable/button_background"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

@@ -28,6 +28,11 @@ class LoginActivity : AppCompatActivity() {
             loginViewModel.login(RequestLogin( username, password))
         }
 
+        binding.etBackButton.setOnClickListener {
+            val intent = Intent(this, WelcomeActivity::class.java)
+            startActivity(intent)
+        }
+
        loginViewModel.loginResponse.observe(this, Observer { response ->
     if (response.isSuccessful) {
         val userResponse = response.body()
