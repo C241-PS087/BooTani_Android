@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.bootani.data.SignUpRequest
 import com.example.bootani.databinding.ActivityRegisterBinding
 import com.example.bootani.viewModel.RegisterViewModel
 

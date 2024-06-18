@@ -1,4 +1,4 @@
-package com.example.bootani
+package com.example.bootani.api
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

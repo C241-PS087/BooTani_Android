@@ -1,4 +1,4 @@
-package com.example.bootani
+package com.example.bootani.data
 
 data class SignUpResponse(
     val message: String?,

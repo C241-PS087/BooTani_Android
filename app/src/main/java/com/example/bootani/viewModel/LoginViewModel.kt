@@ -3,7 +3,7 @@ package com.example.bootani.viewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.bootani.APIConfig
+import com.example.bootani.api.APIConfig
 import com.example.bootani.data.RequestLogin
 import com.example.bootani.data.ResponseLogin
 import retrofit2.Call

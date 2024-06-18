@@ -3,6 +3,7 @@ package com.example.bootani
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.bootani.data.TinjauHargaItem
 import com.example.bootani.databinding.ItemRowTinjauHargaBinding
 
 class TinjauHargaAdapter(private val itemList: List<TinjauHargaItem>) : RecyclerView.Adapter<TinjauHargaAdapter.TinjauHargaViewHolder>() {
