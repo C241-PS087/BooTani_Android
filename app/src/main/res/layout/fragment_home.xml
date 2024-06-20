@@ -100,12 +100,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/img_plant_photo"
+            <TextView
+                android:id="@+id/profile_image"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:textColor="@color/green_light"
+                android:textSize="50sp"
+                android:fontFamily="@font/poppins_extrabold"
+                android:text="A"
+                android:gravity="center"
+                android:background="#EAEAEA"/>
 
         </androidx.cardview.widget.CardView>
 
