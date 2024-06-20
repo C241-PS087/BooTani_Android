@@ -10,12 +10,12 @@
     android:layout_marginTop="4dp"
     android:layout_marginEnd="8dp"
     android:layout_marginBottom="4dp"
-    card_view:cardCornerRadius="4dp">
+    card_view:cardCornerRadius="20dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:padding="8dp"
+        android:padding="18dp"
         android:background="@color/midnight">
 
         <ImageView
@@ -38,6 +38,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/white"
+            android:fontFamily="@font/poppins_extrabold"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintStart_toEndOf="@+id/img_item_photo"
             card_view:layout_constraintTop_toTopOf="@+id/img_item_photo"
@@ -50,6 +51,7 @@
             android:layout_marginTop="8dp"
             android:ellipsize="end"
             android:maxLines="5"
+            android:fontFamily="@font/poppins_medium"
             android:textColor="@color/white"
             card_view:layout_constraintBottom_toBottomOf="@+id/img_item_photo"
             card_view:layout_constraintEnd_toEndOf="@+id/tv_item_name"

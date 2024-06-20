@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.RequiresApi
+import com.squareup.picasso.Picasso
 
 class DetailActivity : AppCompatActivity() {
     private lateinit var tvName: TextView
@@ -21,15 +22,10 @@ class DetailActivity : AppCompatActivity() {
         tvDescription = findViewById(R.id.tv_item_description)
         ivPhoto = findViewById(R.id.img_item_photo)
 
-        val dataArtikel = if (Build.VERSION.SDK_INT >= 33) {
-            intent.getParcelableExtra<Artikel>("key_artikel", Artikel::class.java)
-        } else {
-            @Suppress("DEPRECATION")
-            intent.getParcelableExtra<Artikel>("key_artikel")
-        }
+        val dataArtikel = intent.getParcelableExtra<Artikel>("key_artikel")
 
-        tvName.text = dataArtikel?.name
-        tvDescription.text = dataArtikel?.description
-        ivPhoto.setImageResource(dataArtikel?.photo ?: R.drawable.padi)
+            tvName.text = dataArtikel?.name
+            tvDescription.text = dataArtikel?.description
+            Picasso.get().load(dataArtikel?.photoUrl).into(ivPhoto)
     }
 }

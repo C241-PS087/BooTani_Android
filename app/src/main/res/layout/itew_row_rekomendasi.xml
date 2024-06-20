@@ -33,6 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nama Tanaman"
+                android:fontFamily="@font/poppins_extrabold"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -42,6 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Rp. 0"
+                android:fontFamily="@font/poppins_medium"
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
 
@@ -52,6 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="+0.0%"
+            android:fontFamily="@font/poppins_medium"
             android:textColor="@android:color/holo_green_dark"
             android:textSize="16sp"
             android:layout_gravity="center_vertical"/>

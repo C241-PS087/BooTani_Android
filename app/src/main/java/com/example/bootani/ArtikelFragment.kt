@@ -47,9 +47,12 @@ class ArtikelFragment : Fragment() {
         artikelViewModel.getArtikelsLiveData()
             .observe(viewLifecycleOwner, Observer { responseArtikel ->
                 if (responseArtikel != null) {
-                    Log.d("ArtikelFragment", "onChanged: ${responseArtikel.size}")
                     rvArtikel.layoutManager = LinearLayoutManager(requireContext())
-                    rvArtikel.adapter = ArtikelAdapter(LayoutInflater.from(requireContext()), responseArtikel)
+                    rvArtikel.adapter = ArtikelAdapter(
+                        LayoutInflater.from(requireContext()),
+                        responseArtikel,
+                        requireContext()
+                    )
                 }
             })
 
