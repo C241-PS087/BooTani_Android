@@ -1,17 +1,29 @@
 package com.example.bootani
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.bootani.data.UserPreferences
+import com.example.bootani.viewModel.ArtikelViewModel
+import com.example.bootani.viewModel.UserViewModel
+import com.example.bootani.viewModel.ViewModelFactory
 
 class ArtikelFragment : Fragment() {
 
     private lateinit var rvArtikel: RecyclerView
-    private val list = ArrayList<Artikel>()
+    private lateinit var artikelViewModel: ArtikelViewModel
+
+    private val preferences by lazy { UserPreferences.getInstance(requireContext().dataStore) }
+    private val userViewModel by lazy {
+        ViewModelProvider(this, ViewModelFactory(preferences))[UserViewModel::class.java]
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,30 +36,23 @@ class ArtikelFragment : Fragment() {
         rvArtikel = view.findViewById(R.id.rv_artikels)
         rvArtikel.setHasFixedSize(true)
 
-        // Populate the list and set up the RecyclerView
-        list.addAll(getListArtikels())
-        showRecyclerList()
+        // Initialize ViewModel
+        artikelViewModel = ViewModelProvider(this).get(ArtikelViewModel::class.java)
+
+        // Get articles for a given username
+        userViewModel.getUserName().observe(viewLifecycleOwner) { username ->
+            artikelViewModel.getArtikels(username)
+        }
+        // Observe the LiveData from the ViewModel
+        artikelViewModel.getArtikelsLiveData()
+            .observe(viewLifecycleOwner, Observer { responseArtikel ->
+                if (responseArtikel != null) {
+                    Log.d("ArtikelFragment", "onChanged: ${responseArtikel.size}")
+                    rvArtikel.layoutManager = LinearLayoutManager(requireContext())
+                    rvArtikel.adapter = ArtikelAdapter(LayoutInflater.from(requireContext()), responseArtikel)
+                }
+            })
 
         return view
-    }
-
-    private fun getListArtikels(): ArrayList<Artikel> {
-        val dataName = resources.getStringArray(R.array.data_name)
-        val dataDescription = resources.getStringArray(R.array.data_description)
-        val dataPhoto = resources.obtainTypedArray(R.array.data_photo)
-
-        val listArtikel = ArrayList<Artikel>()
-        for (i in dataName.indices) {
-            val artikel = Artikel(dataName[i], dataDescription[i], dataPhoto.getResourceId(i, -1))
-            listArtikel.add(artikel)
-        }
-        dataPhoto.recycle() // Ensure resources are properly recycled
-        return listArtikel
-    }
-
-    private fun showRecyclerList() {
-        rvArtikel.layoutManager = LinearLayoutManager(requireContext())
-        val listArtikelAdapter = ListArtikelAdapter(list)
-        rvArtikel.adapter = listArtikelAdapter
     }
 }
