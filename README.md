@@ -10,12 +10,10 @@ Beyond price tracking, BooTani serves as a comprehensive resource hub for farmer
 ## Features
 The android app lets you:
 - Login and register
-- reading plant articles
+- Reading plant articles
 - Display the price of farm products
 - Displays what crop prices are on the rise
 - Provides recommendations on what crops should be planted
-
-### README.md
 
 # BooTani
 
