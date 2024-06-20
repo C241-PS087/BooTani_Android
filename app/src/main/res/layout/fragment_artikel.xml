@@ -4,8 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ArtikelFragment">
+    tools:context=".ArtikelFragment"
+    tools:ignore="MissingConstraints">
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-5dp"
+            android:src="@drawable/bar"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Artikel"
+            android:textSize="30sp"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins_bold"/>
+
+    </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_artikels"
@@ -13,12 +34,13 @@
         android:layout_height="0dp"
         android:background="@color/white"
         android:layout_marginTop="110dp"
-        android:layout_marginBottom="95dp"
+        android:layout_marginBottom="90dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        tools:listitem="@layout/item_row_artikel"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

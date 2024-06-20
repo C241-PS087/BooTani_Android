@@ -1,17 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Home"
-        android:gravity="center"
-        android:textColor="@color/midnight"
-        android:textSize="35sp"/>
+        android:layout_height="wrap_content"
+        android:background="#EAEAEAEA">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bg_cv" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BooTani"
+            android:textSize="25sp"
+            android:fontFamily="@font/poppins_extrabold"
+            android:textColor="@color/white"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="28dp"/>
+
+        <TextView
+            android:id="@+id/tvlogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="290dp"
+            android:layout_marginTop="35dp"
+            android:fontFamily="@font/poppins"
+            android:text="Log out"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="italic" />
+
+        <ImageView
+            android:id="@+id/ivlogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="34dp"
+            android:layout_toEndOf="@+id/tvlogout"
+            android:src="@drawable/logout_icon" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bg_cardview"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome!"
+            android:layout_marginTop="100dp"
+            android:layout_marginStart="150dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/praise"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="130dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Rahmat Azrima"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="rahmatazrima@gmail.com"
+            android:layout_marginTop="160dp"
+            android:layout_marginStart="150dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins"
+            android:textSize="15sp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_photo_tinjau"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            app:cardCornerRadius="50dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginStart="45dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_plant_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@tools:sample/avatars" />
+
+        </androidx.cardview.widget.CardView>
+
+     <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+         android:layout_alignParentBottom="true"
+         android:background="@color/white"
+         android:layout_below="@id/iv1"
+            android:layout_marginTop="50dp"
+         app:cardCornerRadius="30dp">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Lagi Naik Nih ! "
+             android:fontFamily="@font/poppins_bold"
+             android:layout_marginStart="30dp"
+             android:layout_marginTop="20dp"
+             android:textSize="20sp"/>
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="See more"
+             android:fontFamily="@font/poppins"
+             android:layout_marginStart="270dp"
+             android:layout_marginTop="24dp"
+             android:textStyle="italic"/>
+
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@drawable/baseline_arrow_right_24"
+             android:layout_marginTop="23dp"
+             android:layout_marginStart="335dp"/>
+
+         <androidx.recyclerview.widget.RecyclerView
+             android:id="@+id/rvBest2"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_below="@id/iv1"
+             android:layout_alignParentBottom="true"
+             android:layout_marginTop="80dp"
+             android:layout_marginBottom="90dp"
+             tools:listitem="@layout/item_row_tinjau_harga"/>
+
+     </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
