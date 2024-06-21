@@ -44,8 +44,8 @@ Beyond price tracking, BooTani serves as a comprehensive resource hub for farmer
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/bootani.git
-    cd bootani
+    git clone https://github.com/Bootani_Android.git
+    cd Bootani_Android
     ```
 
 2. **Open the project in Android Studio**:
